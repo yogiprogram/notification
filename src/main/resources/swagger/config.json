@@ -1,0 +1,9 @@
+{
+  "apiPackage": "com.webtk.notification.api",
+  "modelPackage": "com.webtk.notification.model",
+  "invokerPackage": "com.webtk.notification",
+  "library": "spring-mvc",
+  "dateLibrary": "java8",
+  "interfaceOnly": "true",
+  "hideGenerationTimestamp": true
+}

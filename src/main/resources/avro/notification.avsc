@@ -1,0 +1,14 @@
+{
+    "name": "SendMessage",
+    "namespace": "message",
+    "type": "record",
+    "fields" : [
+            { "name" : "from" , "type" : "string" },
+            { "name" : "to" , "type" : "string" },
+            { "name" : "subject" , "type" : "string" },
+            { "name" : "bodyText" , "type" : "string" },
+            { "name" : "attachmentContentType" , "type" : "string" },
+            { "name" : "attachmentFilename" , "type" : "string" },
+            { "name" : "attachmentContent" , "type" : "string" }
+    ]
+}

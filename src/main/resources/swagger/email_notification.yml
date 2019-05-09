@@ -1,0 +1,64 @@
+swagger: "2.0"
+info:
+  description: "This is Notification Rest service server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/)."
+  version: "1.0.0"
+  title: "Notification Rest service"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "yogesh.it2010@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8181"
+basePath: "/v1"
+tags:
+- name: "email_notification"
+  description: "Send email to user"
+schemes:
+- "http"
+paths:
+  /send-mail:
+    post:
+      tags:
+      - "email_notification"
+      summary: "Creating messages with attachments"
+      operationId: "createEmailWithAttachment"
+      consumes:
+      - "multipart/form-data"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "formData"
+        name: "file"
+        type: "file"
+        required: false
+        allowEmptyValue: true
+        description: "file to be attached."
+      - in: query
+        name: "to"
+        description: "reciver email address"
+        required: true
+        type: string
+      - in: query
+        name: "from"
+        description: "sender email address"
+        required: true
+        type: string
+      - in: query
+        name: "subject"
+        description: "Email subject line"
+        default: "Default Subject"
+        required: true
+        type: string
+      - in: query
+        name: "bodyText"
+        description: "Body text of the email"
+        type: string
+
+      responses:
+        200:
+          description: "Mail send successfully"
+        405:
+          description: "Invalid input"
+
+

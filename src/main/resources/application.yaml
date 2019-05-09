@@ -1,0 +1,30 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: notification
+  sendgrid:
+    api-key: ${sendgrid-api-key}
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: message-group-id
+      auto-offset-reset: earliest
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+    producer:
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+
+    properties:
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
+
+notification:
+  smtpName: sendGrid
+  kafka.sendmessage.topic: sendmessage
+  kafka.sendmessage.records: 1
+  maxAttemptsExpression: ${maxAttemptsExpression:2}
+  maxDelayExpression: ${maxDelayExpression:50000}
+
