@@ -74,7 +74,7 @@ Once server up use below link to Run swagger UI
 
 **Swagger UI Link** 
   
-http://localhost:8181/swagger-ui.html
+http://localhost:8181/swagger-ui.html#!/email_notification/createEmailWithAttachment
 
 
 
