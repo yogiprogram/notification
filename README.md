@@ -67,7 +67,7 @@ public class  GmailServiceImpl implements SmtpService {
 src/main/resources/swagger/email_notification.yml
 `
 
-**Kafka Consumer ** 
+**Kafka Consumer** 
 
 /src/main/java/com/webtk/notification/kafka/SendEmailConsumer.java
 
