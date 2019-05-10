@@ -10,8 +10,8 @@ import org.springframework.retry.annotation.EnableRetry;
 @EnableKafka
 public class NotificationApplication {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    SpringApplication.run(NotificationApplication.class, args);
-  }
+        SpringApplication.run(NotificationApplication.class, args);
+    }
 }

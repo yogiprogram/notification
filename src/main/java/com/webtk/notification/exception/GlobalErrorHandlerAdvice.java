@@ -15,11 +15,11 @@ import java.util.Map;
 @Slf4j
 public class GlobalErrorHandlerAdvice extends DefaultErrorAttributes {
 
-  @ExceptionHandler(value = {IllegalArgumentException.class, Exception.class})
-  protected ResponseEntity<Map<String, Object>> handleConflict(
-      RuntimeException ex, WebRequest request) {
-    Map<String, Object> errorAttributes = super.getErrorAttributes(request, false);
-    errorAttributes.put("error", ex.getMessage());
-    return new ResponseEntity<>(errorAttributes, new HttpHeaders(), HttpStatus.CONFLICT);
-  }
+    @ExceptionHandler(value = {IllegalArgumentException.class, Exception.class})
+    protected ResponseEntity<Map<String, Object>> handleConflict(
+            RuntimeException ex, WebRequest request) {
+        Map<String, Object> errorAttributes = super.getErrorAttributes(request, false);
+        errorAttributes.put("error", ex.getMessage());
+        return new ResponseEntity<>(errorAttributes, new HttpHeaders(), HttpStatus.CONFLICT);
+    }
 }

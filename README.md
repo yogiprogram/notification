@@ -30,21 +30,28 @@ notification:
    * Currently SendGrid SMTP is use to send message
    * If in future want to send message using another SMPT below are changes need to do.
    
-    1. in application yaml chenage below property
+    1. in application yaml change below property and add smtp properties and implementation by creating new bean
     ```
     notification:
       smtpName: gmail
+     
      ```
     2. create a bean
      
      ```
       
      @Component 
-     public class  GmailServiceImpl implements SmtpFactory {
-       @Override
+     public class  GmailServiceImpl implements SmtpService {
+     
+       @Override // this method handle message from rest service.
        public void createMailAndSend(){
             //implement details
        }
+       
+       @Override // This is handle message from kafka
+       void createMailAndSend(SendMessage consumerRecord) {
+       }
+           
      }
      ```
       

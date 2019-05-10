@@ -9,15 +9,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface SendMailService {
 
-  @Retryable(
-      value = {MailException.class},
-      maxAttemptsExpression = "${notification.maxAttemptsExpression}",
-      backoff = @Backoff(maxDelayExpression = "${notification.maxDelayExpression}"))
-  void createEmailWithAttachment(
-      String to, String from, MultipartFile attachment, String subject, String bodyText);
+    @Retryable(
+            value = {MailException.class},
+            maxAttemptsExpression = "${notification.maxAttemptsExpression}",
+            backoff = @Backoff(maxDelayExpression = "${notification.maxDelayExpression}"))
+    void createEmailWithAttachment(
+            String to, String from, MultipartFile attachment, String subject, String bodyText);
 
-  @Recover
-  void createEmailWithAttachmentFallback(RuntimeException e);
+    @Recover
+    void createEmailWithAttachmentFallback(RuntimeException e);
 
-  void createEmailWithAttachment(SendMessage consumerRecord);
+    void createEmailWithAttachment(SendMessage consumerRecord);
 }
