@@ -18,7 +18,8 @@ Configuration in  **application.yaml**
 
 **Configuration**
 
-* Retry *
+*Retry setting*
+
 ```
 notification:
   maxAttemptsExpression: ${maxAttemptsExpression:2}
@@ -26,40 +27,45 @@ notification:
   
 ```
 
-* Other Configuration found in src/main/resources/application.yaml *
-   * Currently SendGrid SMTP is use to send message
-   * If in future want to send message using another SMPT below are changes need to do.
+*Other Configuration found in src/main/resources/application.yaml*
+   *Currently SendGrid SMTP is use to send message*
    
-    1. in application yaml change below property and add smtp properties and implementation by creating new bean
-    ```
-    notification:
-      smtpName: gmail
-     
-     ```
-    2. create a bean
-     
-     ```
-      
-     @Component 
-     public class  GmailServiceImpl implements SmtpService {
-     
-       @Override // this method handle message from rest service.
-       public void createMailAndSend(){
-            //implement details
-       }
-       
-       @Override // This is handle message from kafka
-       void createMailAndSend(SendMessage consumerRecord) {
-       }
-           
-     }
-     ```
-      
-    3. SmtpFactoryImpl.getSmtpFactory() use to get SMTP implementation.
+   *If in future want to send message using another SMPT below are changes need to do.*
    
-* Use first api approach for api development. Use below api file into editor to update api by using online swagger editor https://editor.swagger.io/
+   
+   1.in application yaml change below property and add smtp properties and implementation by creating new bean
     
-    `src/main/resources/swagger/email_notification.yml`
+```
+ notification:
+   smtpName: gmail
+```
+     
+   2.create a bean
+     
+```
+
+@Component 
+public class  GmailServiceImpl implements SmtpService {
+
+ @Override // this method handle message from rest service.
+ public void createMailAndSend(){
+      //implement details
+ }
+
+ @Override // This is handle message from kafka
+ void createMailAndSend(SendMessage consumerRecord) {
+ }
+
+}
+```
+      
+   3. SmtpFactoryImpl.getSmtpFactory() use to get SMTP implementation.
+   
+*Use first api approach for api development. Use below api file into editor to update api by using online swagger editor https://editor.swagger.io/*
+    
+`
+src/main/resources/swagger/email_notification.yml
+`
 
 **Kafka Consumer ** 
 
