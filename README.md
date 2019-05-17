@@ -91,4 +91,10 @@ http://localhost:8181/swagger-ui.html#!/email_notification/createEmailWithAttach
 
 
 
+**Another way detect SMTP Service by using @ConditionalOnProperty **
+
+https://github.com/yogiprogram/notification/tree/ConditionalOnProperty
+
+
+
 
