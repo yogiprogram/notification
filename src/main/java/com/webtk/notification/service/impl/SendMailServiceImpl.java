@@ -22,7 +22,7 @@ public class SendMailServiceImpl implements SendMailService {
     @Override
     public void createEmailWithAttachment(
             String to, String from, MultipartFile attachment, String subject, String bodyText) {
-        SmtpService smtpService = this.smtpFactory.getSmtpFactory(smtpName);
+        SmtpService smtpService = this.smtpFactory.getSmtpFactory();
         smtpService.createMailAndSend(to, from, subject, bodyText, attachment);
     }
 
@@ -33,7 +33,7 @@ public class SendMailServiceImpl implements SendMailService {
 
     @Override
     public void createEmailWithAttachment(SendMessage consumerRecord) {
-        SmtpService smtpFactory = this.smtpFactory.getSmtpFactory(smtpName);
+        SmtpService smtpFactory = this.smtpFactory.getSmtpFactory();
         smtpFactory.createMailAndSend(consumerRecord);
     }
 }

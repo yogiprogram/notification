@@ -41,13 +41,14 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * All-args constructor.
-     * @param from The new value for from
-     * @param to The new value for to
-     * @param subject The new value for subject
-     * @param bodyText The new value for bodyText
+     *
+     * @param from                  The new value for from
+     * @param to                    The new value for to
+     * @param subject               The new value for subject
+     * @param bodyText              The new value for bodyText
      * @param attachmentContentType The new value for attachmentContentType
-     * @param attachmentFilename The new value for attachmentFilename
-     * @param attachmentContent The new value for attachmentContent
+     * @param attachmentFilename    The new value for attachmentFilename
+     * @param attachmentContent     The new value for attachmentContent
      */
     public SendMessage(java.lang.String from, java.lang.String to, java.lang.String subject, java.lang.String bodyText, java.lang.String attachmentContentType, java.lang.String attachmentFilename, java.lang.String attachmentContent) {
         this.from = from;
@@ -65,6 +66,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Creates a new SendMessage RecordBuilder.
+     *
      * @return A new SendMessage RecordBuilder
      */
     public static message.SendMessage.Builder newBuilder() {
@@ -73,6 +75,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Creates a new SendMessage RecordBuilder by copying an existing Builder.
+     *
      * @param other The existing builder to copy.
      * @return A new SendMessage RecordBuilder
      */
@@ -82,6 +85,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Creates a new SendMessage RecordBuilder by copying an existing SendMessage instance.
+     *
      * @param other The existing instance to copy.
      * @return A new SendMessage RecordBuilder
      */
@@ -147,6 +151,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Gets the value of the 'from' field.
+     *
      * @return The value of the 'from' field.
      */
     public java.lang.String getFrom() {
@@ -155,6 +160,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Sets the value of the 'from' field.
+     *
      * @param value the value to set.
      */
     public void setFrom(java.lang.String value) {
@@ -163,6 +169,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Gets the value of the 'to' field.
+     *
      * @return The value of the 'to' field.
      */
     public java.lang.String getTo() {
@@ -171,6 +178,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Sets the value of the 'to' field.
+     *
      * @param value the value to set.
      */
     public void setTo(java.lang.String value) {
@@ -179,6 +187,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Gets the value of the 'subject' field.
+     *
      * @return The value of the 'subject' field.
      */
     public java.lang.String getSubject() {
@@ -187,6 +196,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Sets the value of the 'subject' field.
+     *
      * @param value the value to set.
      */
     public void setSubject(java.lang.String value) {
@@ -195,6 +205,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Gets the value of the 'bodyText' field.
+     *
      * @return The value of the 'bodyText' field.
      */
     public java.lang.String getBodyText() {
@@ -203,6 +214,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Sets the value of the 'bodyText' field.
+     *
      * @param value the value to set.
      */
     public void setBodyText(java.lang.String value) {
@@ -211,6 +223,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Gets the value of the 'attachmentContentType' field.
+     *
      * @return The value of the 'attachmentContentType' field.
      */
     public java.lang.String getAttachmentContentType() {
@@ -219,6 +232,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Sets the value of the 'attachmentContentType' field.
+     *
      * @param value the value to set.
      */
     public void setAttachmentContentType(java.lang.String value) {
@@ -227,6 +241,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Gets the value of the 'attachmentFilename' field.
+     *
      * @return The value of the 'attachmentFilename' field.
      */
     public java.lang.String getAttachmentFilename() {
@@ -235,6 +250,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Sets the value of the 'attachmentFilename' field.
+     *
      * @param value the value to set.
      */
     public void setAttachmentFilename(java.lang.String value) {
@@ -243,6 +259,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Gets the value of the 'attachmentContent' field.
+     *
      * @return The value of the 'attachmentContent' field.
      */
     public java.lang.String getAttachmentContent() {
@@ -251,6 +268,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
     /**
      * Sets the value of the 'attachmentContent' field.
+     *
      * @param value the value to set.
      */
     public void setAttachmentContent(java.lang.String value) {
@@ -283,13 +301,16 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
         private java.lang.String attachmentFilename;
         private java.lang.String attachmentContent;
 
-        /** Creates a new Builder */
+        /**
+         * Creates a new Builder
+         */
         private Builder() {
             super(SCHEMA$);
         }
 
         /**
          * Creates a Builder by copying an existing Builder.
+         *
          * @param other The existing Builder to copy.
          */
         private Builder(message.SendMessage.Builder other) {
@@ -326,6 +347,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Creates a Builder by copying an existing SendMessage instance
+         *
          * @param other The existing instance to copy.
          */
         private Builder(message.SendMessage other) {
@@ -362,6 +384,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Gets the value of the 'from' field.
+         *
          * @return The value.
          */
         public java.lang.String getFrom() {
@@ -370,6 +393,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Sets the value of the 'from' field.
+         *
          * @param value The value of 'from'.
          * @return This builder.
          */
@@ -382,6 +406,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Checks whether the 'from' field has been set.
+         *
          * @return True if the 'from' field has been set, false otherwise.
          */
         public boolean hasFrom() {
@@ -391,6 +416,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Clears the value of the 'from' field.
+         *
          * @return This builder.
          */
         public message.SendMessage.Builder clearFrom() {
@@ -401,6 +427,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Gets the value of the 'to' field.
+         *
          * @return The value.
          */
         public java.lang.String getTo() {
@@ -409,6 +436,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Sets the value of the 'to' field.
+         *
          * @param value The value of 'to'.
          * @return This builder.
          */
@@ -421,6 +449,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Checks whether the 'to' field has been set.
+         *
          * @return True if the 'to' field has been set, false otherwise.
          */
         public boolean hasTo() {
@@ -430,6 +459,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Clears the value of the 'to' field.
+         *
          * @return This builder.
          */
         public message.SendMessage.Builder clearTo() {
@@ -440,6 +470,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Gets the value of the 'subject' field.
+         *
          * @return The value.
          */
         public java.lang.String getSubject() {
@@ -448,6 +479,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Sets the value of the 'subject' field.
+         *
          * @param value The value of 'subject'.
          * @return This builder.
          */
@@ -460,6 +492,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Checks whether the 'subject' field has been set.
+         *
          * @return True if the 'subject' field has been set, false otherwise.
          */
         public boolean hasSubject() {
@@ -469,6 +502,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Clears the value of the 'subject' field.
+         *
          * @return This builder.
          */
         public message.SendMessage.Builder clearSubject() {
@@ -479,6 +513,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Gets the value of the 'bodyText' field.
+         *
          * @return The value.
          */
         public java.lang.String getBodyText() {
@@ -487,6 +522,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Sets the value of the 'bodyText' field.
+         *
          * @param value The value of 'bodyText'.
          * @return This builder.
          */
@@ -499,6 +535,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Checks whether the 'bodyText' field has been set.
+         *
          * @return True if the 'bodyText' field has been set, false otherwise.
          */
         public boolean hasBodyText() {
@@ -508,6 +545,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Clears the value of the 'bodyText' field.
+         *
          * @return This builder.
          */
         public message.SendMessage.Builder clearBodyText() {
@@ -518,6 +556,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Gets the value of the 'attachmentContentType' field.
+         *
          * @return The value.
          */
         public java.lang.String getAttachmentContentType() {
@@ -526,6 +565,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Sets the value of the 'attachmentContentType' field.
+         *
          * @param value The value of 'attachmentContentType'.
          * @return This builder.
          */
@@ -538,6 +578,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Checks whether the 'attachmentContentType' field has been set.
+         *
          * @return True if the 'attachmentContentType' field has been set, false otherwise.
          */
         public boolean hasAttachmentContentType() {
@@ -547,6 +588,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Clears the value of the 'attachmentContentType' field.
+         *
          * @return This builder.
          */
         public message.SendMessage.Builder clearAttachmentContentType() {
@@ -557,6 +599,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Gets the value of the 'attachmentFilename' field.
+         *
          * @return The value.
          */
         public java.lang.String getAttachmentFilename() {
@@ -565,6 +608,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Sets the value of the 'attachmentFilename' field.
+         *
          * @param value The value of 'attachmentFilename'.
          * @return This builder.
          */
@@ -577,6 +621,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Checks whether the 'attachmentFilename' field has been set.
+         *
          * @return True if the 'attachmentFilename' field has been set, false otherwise.
          */
         public boolean hasAttachmentFilename() {
@@ -586,6 +631,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Clears the value of the 'attachmentFilename' field.
+         *
          * @return This builder.
          */
         public message.SendMessage.Builder clearAttachmentFilename() {
@@ -596,6 +642,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Gets the value of the 'attachmentContent' field.
+         *
          * @return The value.
          */
         public java.lang.String getAttachmentContent() {
@@ -604,6 +651,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Sets the value of the 'attachmentContent' field.
+         *
          * @param value The value of 'attachmentContent'.
          * @return This builder.
          */
@@ -616,6 +664,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Checks whether the 'attachmentContent' field has been set.
+         *
          * @return True if the 'attachmentContent' field has been set, false otherwise.
          */
         public boolean hasAttachmentContent() {
@@ -625,6 +674,7 @@ public class SendMessage extends org.apache.avro.specific.SpecificRecordBase imp
 
         /**
          * Clears the value of the 'attachmentContent' field.
+         *
          * @return This builder.
          */
         public message.SendMessage.Builder clearAttachmentContent() {

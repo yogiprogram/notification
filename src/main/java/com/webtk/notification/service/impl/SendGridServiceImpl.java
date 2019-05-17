@@ -6,6 +6,7 @@ import com.webtk.notification.service.SmtpService;
 import lombok.extern.slf4j.Slf4j;
 import message.SendMessage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,6 +17,9 @@ import java.util.Objects;
 
 @Component
 @Slf4j
+@ConditionalOnProperty(
+        name = "notification.smtpName",
+        havingValue = "sendGrid")
 public class SendGridServiceImpl implements SmtpService {
 
     @Autowired

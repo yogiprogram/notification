@@ -39,20 +39,22 @@ notification:
     2. create a bean
      
      ```
-      
-     @Component 
-     public class  GmailServiceImpl implements SmtpService {
      
-       @Override // this method handle message from rest service.
-       public void createMailAndSend(){
-            //implement details
-       }
-       
-       @Override // This is handle message from kafka
-       void createMailAndSend(SendMessage consumerRecord) {
-       }
-           
+     @ConditionalOnProperty(
+             name = "notification.smtpName",
+             havingValue = "gmail")
+     @Component
+     public class GmailServiceImpl implements SmtpService {
+            @Override // this method handle message from rest service.
+            public void createMailAndSend(){
+                 //implement details
+            }
+            
+            @Override // This is handle message from kafka
+            void createMailAndSend(SendMessage consumerRecord) {
+            }
      }
+     
      ```
       
     3. SmtpFactoryImpl.getSmtpFactory() use to get SMTP implementation.
